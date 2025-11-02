@@ -1,8 +1,11 @@
 'use client'
 
 import { redirect } from 'next/navigation'
+import { useState } from 'react'
 
 export default function Login() {
+  const [isClosed, setIsClosed] = useState(false)
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
 
@@ -35,9 +38,17 @@ export default function Login() {
       {/* Основна частина */}
       <div className="flex justify-center items-center flex-1">
         {/* Попередження */}
-        <div className="top-12 opacity-70 text-xl px-2 absolute text-center text-black border border-red-600 bg-red-200 py-3 mb-6 rounded-md shadow-sm">
-          ⚠️ Ця сторінка створена лише в навчальних цілях ⚠️
-        </div>
+        {!isClosed && (
+          <div className="top-12 opacity-70 text-xl px-2 absolute text-center text-black border border-red-600 bg-red-200 py-3 mb-6 rounded-md shadow-sm">
+            <div
+              className="absolute top-0 right-1 cursor-pointer"
+              onClick={() => setIsClosed(true)}
+            >
+              X
+            </div>
+            ⚠️ Ця сторінка створена лише в навчальних цілях ⚠️
+          </div>
+        )}
 
         {/* Блок зображення */}
         <div className="hidden lg:flex mr-8 relative">
