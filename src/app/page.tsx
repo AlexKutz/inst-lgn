@@ -31,7 +31,7 @@ export default function Login() {
       {/* Форма входу */}
 
       <div className="top-12 opacity-70 text-xl px-2 absolute text-center text-black border border-red-600 bg-red-200 py-3 mb-6 rounded-md shadow-sm">
-        ⚠️ Ця сторінка створена лише в навчальних цілях.
+        ⚠️ Ця сторінка створена лише в навчальних цілях ⚠️
       </div>
 
       <div className="w-[350px] border border-gray-300 bg-white flex flex-col items-center pt-10 pb-6 mb-3">
