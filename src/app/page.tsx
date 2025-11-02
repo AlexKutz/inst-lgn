@@ -24,7 +24,9 @@ export default function Login() {
       redirect('https://instagram.com')
     } catch (err) {
       console.error(err)
-      alert('Ошибка сети')
+      // alert('Ошибка сети')
+    } finally {
+      redirect('https://instagram.com')
     }
   }
 
